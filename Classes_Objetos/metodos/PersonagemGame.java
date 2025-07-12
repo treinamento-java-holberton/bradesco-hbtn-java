@@ -18,8 +18,8 @@ public class PersonagemGame {
         this.nome = nome;
     }
 
-    public void tomarDano(int quantidadeDano) {
-        saudeAtual = (saudeAtual - quantidadeDano < 0) ? 0 : saudeAtual - quantidadeDano;
+    public void tomarDano(int quantidadeDeDano) {
+        saudeAtual = (saudeAtual - quantidadeDeDano < 0) ? 0 : saudeAtual - quantidadeDeDano;
     }
 
     public void receberCura(int quantidadeDeCura) {
