@@ -29,7 +29,6 @@ public class Pedido {
         System.out.println("----------------------------");
         System.out.println(String.format("DESCONTO: %.2f", desconto));
         System.out.println(String.format("TOTAL PRODUTOS: %.2f", totalBruto));
-        System.out.println(String.format("TOTAL PRODUTOS: %.2f", totalBruto));
         System.out.println("----------------------------");
         System.out.println(String.format("TOTAL PEDIDO: %.2f", resultado));
         System.out.println("----------------------------");
