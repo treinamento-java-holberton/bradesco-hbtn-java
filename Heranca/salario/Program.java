@@ -13,7 +13,7 @@ public class Program {
         Empregado empregadoDocumentacao2 = new Empregado(3000);
         Gerente gerenteDocumentacao = new Gerente(4980);
 
-        System.out.printf(new Locale("pt","BR"), "Salario Fixo: %.2f - Salario Total: %.2f - Valor Bonus: %.2f\n",
+        System.out.(new Locale("pt","BR"), "Salario Fixo: %.2f - Salario Total: %.2f - Valor Bonus: %.2f\n",
                 empregadoEngenharia1.getSalarioFixo(),
                 empregadoEngenharia1.calcularSalarioTotal(departamentoEngenharia),
                 empregadoEngenharia1.calcularBonus(departamentoEngenharia));
