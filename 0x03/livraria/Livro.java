@@ -9,7 +9,7 @@ public class Livro {
     protected String autor;
     protected double preco;
 
-    public Livro(String titulo, String autor, double preco) throws LivroInvalidoException, AutorInvalidoException{
+    public Livro(String titulo, String autor, double preco) throws LivroInvalidoException, AutorInvalidoException {
         setTitulo(titulo);
         setAutor(autor);
         setPreco(preco);
