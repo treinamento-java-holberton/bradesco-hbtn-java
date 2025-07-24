@@ -33,9 +33,9 @@ public class CsvFileReader {
                 sb.append("Funcionário: %s\n".formatted(funcionario));
                 sb.append("Idade: %s\n".formatted(idade));
                 sb.append( "Departamento: %s\n".formatted(departamento));
-                sb.append("Salarial: %s".formatted(salarial));
+                sb.append("Salarial: %s\n".formatted(salarial));
+                sb.append("------------------------");
                 System.out.println(sb.toString());
-                System.out.println("------------------------");
                 linha = reader.readLine();
             }
         } catch (Exception e) {
