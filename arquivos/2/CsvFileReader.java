@@ -1,9 +1,9 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 import java.util.Objects;
 import java.util.ArrayList;
 import java.nio.file.*;
+import java.nio.charset.StandardCharsets;
+
 
 public class CsvFileReader {
 
@@ -19,10 +19,12 @@ public class CsvFileReader {
         }
 
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(path.toString()));
-            StringBuilder sb = new StringBuilder();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    new FileInputStream("funcionarios.csv"), StandardCharsets.UTF_8));
+
             String linha = reader.readLine();
             while (Objects.nonNull(linha)) {
+                StringBuilder sb = new StringBuilder();
                 String[] dados = linha.split(",");
                 funcionario = dados[0];
                 idade = dados[1];
@@ -32,9 +34,9 @@ public class CsvFileReader {
                 sb.append("Funcionário: %s\n".formatted(funcionario));
                 sb.append("Idade: %s\n".formatted(idade));
                 sb.append( "Departamento: %s\n".formatted(departamento));
-                sb.append("Salarial: %s\n".formatted(salarial));
-                sb.append("------------------------");
+                sb.append("Salarial: %s".formatted(salarial));
                 System.out.println(sb.toString());
+                System.out.println("------------------------");
                 linha = reader.readLine();
             }
         } catch (Exception e) {
