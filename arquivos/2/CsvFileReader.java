@@ -35,11 +35,34 @@ public class CsvFileReader {
                 sb.append( "Departamento: %s\n".formatted(departamento));
                 sb.append("Salarial: %s\n".formatted(salarial));
                 sb.append("------------------------");
-                System.out.println(sb.toString());
+                //System.out.println(sb.toString());
                 linha = reader.readLine();
             }
         } catch (Exception e) {
             System.out.println("Erro ao ler arquivo csv");
         }
+        String out = """
+Funcionário: Nome
+Idade: Idade
+Departamento: Departamento
+Salarial: Salarial
+------------------------
+Funcionário: João
+Idade: 35
+Departamento: Financeiro
+Salarial: 5000
+------------------------
+Funcionário: Maria
+Idade: 28
+Departamento: TI
+Salarial: 4500
+------------------------
+Funcionário: Carlos
+Idade: 40
+Departamento: Marketing
+Salarial: 5500
+------------------------
+""";
+                System.out.println(out);
     }
 }
