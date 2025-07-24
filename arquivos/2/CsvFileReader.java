@@ -19,8 +19,7 @@ public class CsvFileReader {
         }
 
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    new FileInputStream("funcionarios.csv"), StandardCharsets.UTF_8));
+            BufferedReader reader = new BufferedReader(new FileReader("funcionarios.csv"));
 
             String linha = reader.readLine();
             while (Objects.nonNull(linha)) {
