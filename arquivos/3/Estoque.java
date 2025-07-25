@@ -14,7 +14,6 @@ public class Estoque {
     public Estoque(String nomeArquivo) {
         this.caminho = nomeArquivo;
         this.estoque = carregarEstoque(fileReader(nomeArquivo));
-        this.estoque.sort(Comparator.comparingInt(Produto::getId));
         try {
             FileReader reader = new FileReader("");
             FileWriter writer = new FileWriter("");
