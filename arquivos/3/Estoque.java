@@ -11,7 +11,7 @@ public class Estoque {
 
     public Estoque(String nomeArquivo) {
         this.caminho = nomeArquivo;
-        this.estoque = carregarEstoque(carregarCsv(nomeArquivo));
+        this.estoque = carregarEstoque(fileReader(nomeArquivo));
         this.estoque.sort(Comparator.comparingInt(Produto::getId));
     }
 
@@ -19,7 +19,7 @@ public class Estoque {
         Produto produto = findById(idAtualizar);
         produto.setQuantidade(novaQuantidade);
         estoque.set(estoque.indexOf(produto), produto);
-        gravarDados();
+        fileWriter();
     }
 
     public void exibirEstoque() {
@@ -29,14 +29,14 @@ public class Estoque {
     public void excluirProduto(int idExcluir){
         Produto produto = findById(idExcluir);
         estoque.remove(produto);
-        gravarDados();
+        fileWriter();
     }
 
     public void adicionarProduto(String nome, int quantidade, double preco) {
         int maiorId = estoque.stream().max(Comparator.comparing(Produto::getId)).get().getId();
         int idProduto = maiorId + 1;
         estoque.add(new Produto(idProduto, nome, quantidade, preco));
-        gravarDados();
+        fileWriter();
     }
 
     private Produto findById(int idProduto) {
@@ -44,7 +44,7 @@ public class Estoque {
         .findFirst().orElseThrow(()-> new RuntimeException("Id de produto não encontrado"));
     }
 
-    private void gravarDados() {
+    private void fileWriter() {
         try {
             Files.write(Paths.get(caminho), estoque.stream().map(i-> i.toCsv()).toList());
         } catch (Exception e) {
@@ -65,7 +65,7 @@ public class Estoque {
         return output;
     }
 
-    private static List<String[]> carregarCsv(String nomeArquivo) {
+    private static List<String[]> fileReader(String nomeArquivo) {
         List<String[]> output = new ArrayList<>();
         try {
                 Path caminho = Paths.get(nomeArquivo);
