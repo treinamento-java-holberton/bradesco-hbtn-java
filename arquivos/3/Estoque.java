@@ -68,8 +68,8 @@ public class Estoque {
         for(String[] dado:dadosBrutos) {
             int id = Integer.parseInt(dado[0]);
             String nome = dado[1];
-            int quantidade = Integer.parseInt(dado[0]);
-            double preco = Double.parseDouble(dado[0]);
+            int quantidade = Integer.parseInt(dado[2]);
+            double preco = Double.parseDouble(dado[3]);
             Produto produto = new Produto(id, nome, quantidade, preco);
             output.add(produto);
         }
