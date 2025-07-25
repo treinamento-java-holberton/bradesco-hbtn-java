@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.io.FileReader;
+import java.io.FileWriter;
 
 public class Estoque {
 
@@ -13,6 +15,11 @@ public class Estoque {
         this.caminho = nomeArquivo;
         this.estoque = carregarEstoque(fileReader(nomeArquivo));
         this.estoque.sort(Comparator.comparingInt(Produto::getId));
+        try {
+            FileReader reader = new FileReader("");
+            FileWriter writer = new FileWriter("");
+        } catch (java.lang.Exception e) {
+        }
     }
 
     public void atualizarQuantidade(int idAtualizar, int novaQuantidade) {
