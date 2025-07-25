@@ -60,7 +60,6 @@ public class Estoque {
             int quantidade = Integer.parseInt(dado[0]);
             double preco = Double.parseDouble(dado[0]);
             Produto produto = new Produto(id, nome, quantidade, preco);
-            System.out.println(produto);
             output.add(produto);
         }
         return output;
