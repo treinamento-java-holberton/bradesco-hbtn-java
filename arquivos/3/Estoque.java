@@ -34,8 +34,13 @@ public class Estoque {
     }
 
     public void excluirProduto(int idExcluir){
-        Produto produto = findById(idExcluir);
-        estoque.remove(produto);
+        Produto produto;
+        try {
+            produto = findById(idExcluir);
+            estoque.remove(produto);
+        } catch (RuntimeException e) {
+            //pass;
+        }
         fileWriter();
     }
 
