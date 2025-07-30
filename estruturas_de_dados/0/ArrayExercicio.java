@@ -27,7 +27,9 @@ public class ArrayExercicio {
             int input = scanner.nextInt();
             numeros[i] = input;
             soma += input;
-            maiorNumero = (input > maiorNumero) ? input : maiorNumero;
+            if (input > maiorNumero) {
+                maiorNumero = input;
+            }
         }
         // Exibindo os resultados
         String[] comoString = Arrays.stream(numeros)
