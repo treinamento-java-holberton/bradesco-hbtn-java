@@ -25,7 +25,7 @@ public class PessoasArray {
         int inicio = 0;
         int fim = nomes.length - 1;
 
-        System.out.println("Procurando o nome: \"%s\"");
+        System.out.println("Procurando o nome: \"%s\"".formatted(nome));
         
         while (inicio <= fim) {
             int alvo = (inicio + fim) / 2;
