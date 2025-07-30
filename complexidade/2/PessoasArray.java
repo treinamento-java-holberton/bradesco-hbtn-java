@@ -34,10 +34,9 @@ public class PessoasArray {
                 encontrado = true;
                 System.out.println("Nome %s encontrado na posição %d".formatted(nome, alvo));
                 break;
-            }
-            if (nome.compareTo(nomes[alvo]) > 0) {
+            } else if (nome.compareTo(nomes[alvo]) > 0) {
                 inicio = alvo + 1;
-            } else if {
+            } else {
                 fim = alvo - 1;
             }
         }
