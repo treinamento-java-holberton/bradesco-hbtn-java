@@ -23,7 +23,7 @@ public class ArrayExercicio {
         // Utilize scanner.nextInt(); para receber o numero digitado
         System.out.println("Digite 10 números inteiros:");
         for (int i = 0; i < tamanhoArray; i++) {
-            System.out.println("Digite o número %d: ".formatted(i + 1));
+            System.out.printf("Digite o número %d: ".formatted(i + 1));
             int input = scanner.nextInt();
             numeros[i] = input;
             soma = soma + input;
@@ -34,10 +34,10 @@ public class ArrayExercicio {
                 .mapToObj(String::valueOf).toArray(String[]::new);
         String output = String.join(" ", comoString);
 
-        System.out.println("Conteudo do array:");
+        System.out.println("\n\nConteudo do array:");
         System.out.println(output);
         System.out.println("Soma de todos os números: %d".formatted(soma));
-        System.out.println("Maior numero do array: %d".formatted(maiorNumero));
+        System.out.println("Maior número no array: %d".formatted(maiorNumero));
         // Fechando o scanner
         scanner.close();
     }
