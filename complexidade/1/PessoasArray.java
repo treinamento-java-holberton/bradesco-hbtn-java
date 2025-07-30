@@ -27,7 +27,6 @@ public class PessoasArray {
             if (nomes[i] == nome) {
                 encontrado = true;
                 System.out.println("O nome pesquisado é %s que está na posição %d".formatted(nome, i));
-                break;
             }
         }
         if (!encontrado) {
