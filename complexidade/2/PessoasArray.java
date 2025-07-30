@@ -37,7 +37,7 @@ public class PessoasArray {
             }
             if (nome.compareTo(nomes[alvo]) > 0) {
                 inicio = alvo + 1;
-            } else {
+            } else if {
                 fim = alvo - 1;
             }
         }
