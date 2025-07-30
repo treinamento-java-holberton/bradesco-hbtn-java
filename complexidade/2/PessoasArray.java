@@ -1,3 +1,5 @@
+import java.lang.IllegalArgumentException;
+
 public class PessoasArray {
 
     private String[] nomes;
@@ -38,6 +40,9 @@ public class PessoasArray {
             } else {
                 fim = alvo - 1;
             }
+        }
+        if (!encontrado) {
+            throw new IllegalArgumentException("O nome %s não se encontra no array de nomes".formatted(nome));
         }
     }
 }
