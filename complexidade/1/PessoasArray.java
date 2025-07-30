@@ -18,8 +18,6 @@ public class PessoasArray {
     public void setNomes(String[] nomes) {
         this.nomes = nomes;
     }
-
-    // implementar o método de buscaLinear
     public void buscaLinear(String nome){
         boolean encontrado = false;
         System.out.println("Procurando pelo nome: \"%s\"".formatted(nome));
