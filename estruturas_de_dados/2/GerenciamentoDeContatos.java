@@ -16,13 +16,14 @@ public class GerenciamentoDeContatos {
     public void adicionarContato(String nome, String telefone, String email) {
         Contato contato;
         if (contatos.containsKey(nome)) {
-            contato = contatos.get(nome);
+            System.out.println("Erro: contato com nome %s já existe!".formatted(nome));
         } else {
             contato = new Contato();
+            contato.adicionarEmail(email);
+            contato.adicionarTelefone(telefone);
+            contatos.put(nome, contato);
+            System.out.println("Contato %s adicionado com sucesso!".formatted(nome));
         }
-        contato.adicionarEmail(email);
-        contato.adicionarTelefone(telefone);
-        contatos.put(nome, contato);
     }
 
 
