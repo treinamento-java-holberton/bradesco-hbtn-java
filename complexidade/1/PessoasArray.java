@@ -22,7 +22,7 @@ public class PessoasArray {
     // implementar o método de buscaLinear
     public void buscaLinear(String nome){
         boolean encontrado = false;
-        System.out.println("Procurando pelo nome \"%s\"".formatted(nome));
+        System.out.println("Procurando pelo nome: \"%s\"".formatted(nome));
         for (int i = 0; i < nomes.length; i++) {
             System.out.println("Passando pelo indice:%d".formatted(i));
             if (nomes[i] == nome) {
