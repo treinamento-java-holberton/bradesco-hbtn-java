@@ -10,6 +10,6 @@ public class Eletronico {
 
     @Override
     public java.lang.String toString() {
-        return "[%s] R$ %.2f".formatted(descricao, valor);
+        return "[%s] R$ %f".formatted(descricao, valor);
     }
 }

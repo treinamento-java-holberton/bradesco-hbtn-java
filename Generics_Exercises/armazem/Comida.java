@@ -13,6 +13,6 @@ public class Comida {
 
     @Override
     public String toString() {
-        return "[%s] <%d> R$ <%.2f>".formatted(nome, calorias, preco);
+        return "[%s] %d R$ %f".formatted(nome, calorias, preco);
     }
 }
