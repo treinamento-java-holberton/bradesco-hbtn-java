@@ -1,4 +1,5 @@
 import java.util.Objects;
+import java.lang.IllegalArgumentException;
 
 public class Tarefa {
     private String descricao;
@@ -29,7 +30,7 @@ public class Tarefa {
 
     public void modificarDescircao(String texto) {
         if (Objects.isNull(texto) || texto.isEmpty()) {
-            throw new RuntimeException("Descricao de tarefa invalida");
+            throw new IllegalArgumentException("Descricao de tarefa invalida");
         }
         descricao = texto;
     }

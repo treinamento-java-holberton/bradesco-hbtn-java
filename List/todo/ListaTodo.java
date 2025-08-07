@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Objects;
+import java.lang.IllegalArgumentException;
 
 public class ListaTodo {
 
@@ -37,7 +38,7 @@ public class ListaTodo {
     public void adicionarTarefa(Tarefa novaTarefa) {
         for (Tarefa tarefa : tarefas) {
             if (tarefa.getIdentificador() == novaTarefa.getIdentificador()) {
-                throw new RuntimeException("Tarefa com identificador %d ja existente na lista"
+                throw new IllegalArgumentException("Tarefa com identificador %d ja existente na lista"
                         .formatted(novaTarefa.getIdentificador()));
             };
         }
