@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class Pedido {
 
-    List<PedidoCookie> cookies;
+    ArrayList<PedidoCookie> cookies;
     int totalCaixas = 0;
 
     public Pedido() {
