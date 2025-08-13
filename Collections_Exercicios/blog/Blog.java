@@ -1,14 +1,14 @@
 import java.util.*;
 
 public class Blog {
-    List<Post> postList = new ArrayList<>();
+    private List<Post> postList = new ArrayList<>();
 
     public void adicionarPostagem(Post post) {
         postList.add(post);
     }
 
     public Set<String> obterTodosAutores() {
-        Set<String> set = new HashSet<>();
+        Set<String> set = new TreeSet<>();
         for (Post post:postList) {
             set.add(post.getAutor());
         }
