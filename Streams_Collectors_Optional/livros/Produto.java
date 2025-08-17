@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Produto {
     private String nome;
     private int codigo;
@@ -13,7 +15,7 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "[%d] %s %s R$ %.2f".formatted(codigo, nome, categoria, preco);
+        return String.format(Locale.forLanguageTag("pt-BR"), "[%d] %s %s R$ %.2f", codigo, nome, categoria, preco);
     }
 
     public CategoriaProduto getCategoria() {
