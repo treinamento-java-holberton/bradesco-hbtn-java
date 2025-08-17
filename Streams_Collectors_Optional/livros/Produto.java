@@ -11,8 +11,9 @@ public class Produto {
         this.preco = preco;
     }
 
+    @Override
     public String toString() {
-        return "[%s] %s %s R$ %.2f".formatted(codigo, nome, categoria, preco);
+        return "[%d] %s %s R$ %.2f".formatted(codigo, nome, categoria, preco);
     }
 
     public CategoriaProduto getCategoria() {
