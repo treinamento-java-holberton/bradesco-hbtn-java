@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Pessoa {
 
     private int codigo;
@@ -36,7 +38,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "[%d] %s %s %d R$ %f".formatted(codigo, nome, cargo, idade, salario);
+        return String.format(Locale.forLanguageTag("pt-BR"), "[%d] %s %s %d R$ %f", codigo, nome, cargo, idade, salario);
     }
 
 
