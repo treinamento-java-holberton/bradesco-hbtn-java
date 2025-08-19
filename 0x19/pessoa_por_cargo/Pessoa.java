@@ -34,8 +34,8 @@ public class Pessoa {
         return salario;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
+    @Override
+    public String toString() {
         return "[%d] %s %s %d R$ %f".formatted(codigo, nome, cargo, idade, salario);
     }
 
