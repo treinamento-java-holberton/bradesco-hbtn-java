@@ -19,11 +19,12 @@ public class SistemaFilas {
         produtor2.start();
         consumidor2.start();
 
-        long start = System.nanoTime();
-
-        while (System.nanoTime() < start + TimeUnit.SECONDS.toNanos(20)) {
-            // busy wait;
+        try {
+            Thread.sleep(20000);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
+
         System.exit(0);
     }
     
