@@ -28,9 +28,9 @@ public class VerificacaoLogin {
         if (usuario.equals(usuarioCorreto) && senha.equals(senhaCorreta)) {
             logger.info("Login bem-sucedido para o usuário: {}", usuario);
         } else if (!usuario.equals(usuarioCorreto)) {
-            logger.info("Usuário {} não encontrado!", usuario);
+            logger.warn("Usuário {} não encontrado!", usuario);
         } else {
-            logger.info("Senha incorreta para o usuário: {}", usuarioCorreto);
+            logger.error("Senha incorreta para o usuário: {}", usuarioCorreto);
         }
     }
 }
