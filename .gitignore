@@ -4,6 +4,7 @@
 # intelij
 .idea
 out
+target
 
 # Log file
 *.log
